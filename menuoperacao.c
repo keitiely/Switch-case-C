@@ -1,3 +1,10 @@
+/*2-Faça um programa que mostre o menu de opções a seguir, receba a opção do usuário e os dados necessários para executar cada operação.
+Menu de opções:
+a- O número digitado ao quadrado.
+b- O número digitado ao cubo.
+c- A raiz quadrada do número digitado.
+d- A raiz cúbica do número digitado.
+*/
 #include <stdio.h>
 #include <math.h>
 
