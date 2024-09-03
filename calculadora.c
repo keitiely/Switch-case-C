@@ -1,3 +1,6 @@
+/*3-Faça um programa calculadora que mostre o menu de operações (soma, subtração, divisão, multiplicação, elevar ao um número, raiz 
+de qualquer índice, resto), receba a opção do usuário e os dados necessários para executar cada operação.*/
+
 #include <stdio.h>
 #include <math.h>
 
