@@ -1,3 +1,6 @@
+/*5- Faça um programa que receba o código correspondente ao cargo de um funcionário e seu salário atual e mostre o cargo,
+  o valor do aumento e seu novo salário.
+  Os cargos estão na tabela a seguir.*/
 #include <stdio.h>
 
 int main(){
