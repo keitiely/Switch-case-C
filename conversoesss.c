@@ -1,0 +1,62 @@
+
+/*12- Escreva um programa em C que funcione como um conversor de unidades. O programa deve permitir a conversão entre diferentes unidades de temperatura
+Celsius, Fahrenheit, Kelvin), distância (metros, quilômetros, milhas), e tempo (segundos, minutos, horas).
+
+Use um switch para determinar o tipo de conversão e as unidades de entrada e saída.
+
+Exemplo de Entrada:
+Tipo de conversão: Temperatura Unidade de origem: Celsius Unidade de destino: Fahrenheit Valor: 25
+
+Exemplo de Saída:
+"25 Celsius é equivalente a 77 Fahrenheit."*/
+
+#include<stdio.h>
+int main(){
+  float valor1, result;
+  int destino, origem, conversao;
+  
+  printf("Qual conversao deseja fazer?\n");
+  printf("(1) Temperatura\n");
+  printf("(2) Distancia\n");
+  printf("(3) Tempo\n");
+  scanf("%d", &conversao);
+
+  switch(conversao){
+    case 1:
+    printf("Digite a unidade e para qual deseja converter, separado por espaco, digite o numero correspondente:\n(1) Celsius\n(2) Fahrenheit\n(3) Kelvin\n");
+    scanf("%d %d", &origem, &destino);
+    printf("Digite o valor:\n");
+      scanf("%f", &valor1);
+      
+    //celsius para fahrenheit F= C x 1,8 + 32
+    if(origem==1 && destino==2 ){
+      result = (valor1 * 1.8) + 32;
+      printf("%.1f celsius equivale a %.1f Faherenheit", valor1, result);
+    }
+    //celsius para kelvin K = C + 273
+    if(origem==1 && destino==3 ){
+      result = valor1 + 273;
+      printf("%.1f celsius equivale a %.1f Faherenheit", valor1, result);
+    }
+    //fahrenheit para celsius C= (F-32) / 1,8
+    if(origem==2 && destino==1 ){
+      result = (valor1-32)/1.8;
+      printf("%.1f Faherenheit equivale a %.1f celsius", valor1, result);
+    }
+    //fahrenheit para kelvin K= (F-32) x 5/9 + 273
+    if(origem==2 && destino==3 ){
+      result = (valor1-32) * 5/9 + 273;
+      printf("%.1f Faherenheit equivale a %.1f Kelvin", valor1, result);
+    }
+    //kelvin para celsius C= К - 273
+    if(origem==3 && destino==1 ){
+      result = valor1 - 273;
+      printf("%.1f Kelvin equivale a %.1f Celsius", valor1, result);
+    }
+    //kelvin para fahrenheit K= (K-273) x 1,8 + 32
+    if(origem==3 && destino==2 ){
+      result = (valor1 - 273) * 1.8 + 32;
+      printf("%.1f Kelvin equivale a %.1f Fahrenheit", valor1, result);
+    }
+  }
+}
