@@ -1,5 +1,5 @@
-
-/*12- Escreva um programa em C que funcione como um conversor de unidades. O programa deve permitir a conversão entre diferentes unidades de temperatura
+/*12- Escreva um programa em C que funcione como um conversor de unidades. O programa deve permitir a 
+conversão entre diferentes unidades de temperatura
 Celsius, Fahrenheit, Kelvin), distância (metros, quilômetros, milhas), e tempo (segundos, minutos, horas).
 
 Use um switch para determinar o tipo de conversão e as unidades de entrada e saída.
