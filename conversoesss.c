@@ -22,8 +22,9 @@ int main(){
   scanf("%d", &conversao);
 
   switch(conversao){
+    //temperatura
     case 1:
-    printf("Digite a unidade e para qual deseja converter, separado por espaco, digite o numero correspondente:\n(1) Celsius\n(2) Fahrenheit\n(3) Kelvin\n");
+    printf("Digite o numero correspondente da unidade e para qual deseja converter, separado por espaco:\n(1) Celsius\n(2) Fahrenheit\n(3) Kelvin\n");
     scanf("%d %d", &origem, &destino);
     printf("Digite o valor:\n");
       scanf("%f", &valor1);
@@ -34,29 +35,45 @@ int main(){
       printf("%.1f celsius equivale a %.1f Faherenheit", valor1, result);
     }
     //celsius para kelvin K = C + 273
-    if(origem==1 && destino==3 ){
+    else if(origem==1 && destino==3 ){
       result = valor1 + 273;
       printf("%.1f celsius equivale a %.1f Faherenheit", valor1, result);
     }
     //fahrenheit para celsius C= (F-32) / 1,8
-    if(origem==2 && destino==1 ){
+    else if(origem==2 && destino==1 ){
       result = (valor1-32)/1.8;
       printf("%.1f Faherenheit equivale a %.1f celsius", valor1, result);
     }
     //fahrenheit para kelvin K= (F-32) x 5/9 + 273
-    if(origem==2 && destino==3 ){
+    else if(origem==2 && destino==3 ){
       result = (valor1-32) * 5/9 + 273;
       printf("%.1f Faherenheit equivale a %.1f Kelvin", valor1, result);
     }
     //kelvin para celsius C= К - 273
-    if(origem==3 && destino==1 ){
+    else if(origem==3 && destino==1 ){
       result = valor1 - 273;
       printf("%.1f Kelvin equivale a %.1f Celsius", valor1, result);
     }
     //kelvin para fahrenheit K= (K-273) x 1,8 + 32
-    if(origem==3 && destino==2 ){
+    else if(origem==3 && destino==2 ){
       result = (valor1 - 273) * 1.8 + 32;
       printf("%.1f Kelvin equivale a %.1f Fahrenheit", valor1, result);
+    }
+
+    //Distancia
+    case 2:
+    printf("Digite o numero correspondente da unidade e para qual deseja converter, separado por espaco:\n(1) Metros\n(2) Quilometros\n(3) Milhas\n");
+    scanf("%d %d", &origem, &destino);
+    printf("Digite o valor:\n");
+    scanf("%f", &valor1);
+    //metros para quilometros
+    if(origem==1 && destino==2){
+      result = valor1 / 1000;
+      printf("%.1f metros equivale a %.1f quilometros", valor1, result);
+    }
+    //metros para milhas
+    else if(origem==1 && destino==3){
+      result = valor
     }
   }
 }
